@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rublexpayments"
+version = "1.2.0"
+description = "Python SDK for the Rublex Payment Gateway — accept crypto and fiat payments through a single, terminal-scoped API."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Rublex Team", email = "payments@rublex.io" }]
+keywords = ["rublex", "payments", "crypto", "fiat", "payment-gateway"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = ["requests>=2.25"]
+
+[project.urls]
+Homepage = "https://panel.pay.rublex.io"
+Documentation = "https://github.com/rublex-company/python-payments#readme"
+Source = "https://github.com/rublex-company/python-payments"
+Issues = "https://github.com/rublex-company/python-payments/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+rublexpayments = ["py.typed"]
