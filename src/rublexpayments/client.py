@@ -78,15 +78,12 @@ class RublexPayments:
         """Start a fluent fiat invoice: ``client.fiat().amount(19.99).pick(4)...``"""
         return InvoiceBuilder(self, InvoiceBuilder.TYPE_FIAT)
 
-    def create_crypto_invoice(self, data, payer_choice=False):
+    def create_crypto_invoice(self, data):
         """Create a crypto invoice -> ``POST /pay-request``.
 
         ``data["currency_id"]`` MUST come from a prior call to
         :meth:`get_supported_currencies`. The terminal rejects any id it has
         not enabled with HTTP 422.
-
-        ``payer_choice`` is kept for backwards compatibility and silently
-        ignored: the merchant-fixed flow is the only crypto flow exposed today.
         """
         payload = {"callback_url": self.callback_url}
         payload.update(data)

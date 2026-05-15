@@ -101,5 +101,5 @@ class InvoiceBuilder:
         data.update(extras)
 
         if self._type == TYPE_CRYPTO:
-            return self._client.create_crypto_invoice(data, self._payer_choice)
+            return self._client.create_crypto_invoice(data)
         return self._client.create_fiat_invoice(data, self._payer_choice)
