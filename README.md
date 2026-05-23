@@ -35,8 +35,8 @@ The `rublexpayments` README provided above is your single source of truth.
     ONE argument now (`create_crypto_invoice(data)`), no payer-choice flag.
   - Every SDK call returns the `{"status", "message", "data"}` envelope as a
     `dict`. Wrap that handling centrally.
-  - Hosted invoice pages live on https://panel.pay.rublex.io and are baked into
-    the `data["invoice_url"]` you receive. Redirect customers there as-is.
+  - Hosted invoice pages live on https://p.rublex.io and are baked into the
+    `data["invoice_url"]` you receive. Redirect customers there as-is.
   - If something I ask for is not in the SDK or the README is silent on it,
     STOP and tell me. Never invent endpoints or response fields.
 
